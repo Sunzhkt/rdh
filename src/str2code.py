@@ -14,4 +14,8 @@ def str_decode(s, rule='utf-8'):
     elif len(s) % 8 != 0:
         s = s.ljust(len(s) + 8 - len(s) % 8, '0')
     msg = re.sub(r'0x', '', hex(int(s, 2)))
-    return bytes.fromhex(msg).decode(rule)
+    try:
+        return bytes.fromhex(msg).decode(rule)
+    except:
+        return msg
+        pass
