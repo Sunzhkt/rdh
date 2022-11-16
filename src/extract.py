@@ -80,7 +80,7 @@ plt.plot(hist_recover)
 plt.savefig('../pic/recovered hist.jpg')
 plt.show()
 
-cv.imwrite('Lena(recovered).tif', img)
+cv.imwrite('../pic/Lena(recovered).tif', img)
 
 plt.imshow(img)
 plt.title('Recovered Lena')
